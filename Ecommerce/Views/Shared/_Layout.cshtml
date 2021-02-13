@@ -1,0 +1,29 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/css/icons.min.css" rel="stylesheet"/>
+    <link href="/css/app.min.css" rel="stylesheet"/>
+    @await RenderSectionAsync("Styles", false)
+</head>
+<body>
+    @await Html.PartialAsync("_customnav")
+    @await Html.PartialAsync("_sidebar")
+    <div class="content-page" style="margin-top:0;">
+        @RenderBody()
+
+        @await Html.PartialAsync("_footer")
+    </div>
+
+
+
+    <script src="/js/pages/ecommerce-dashboard.init.js"></script>
+    <script src="/libs/flatpickr/flatpickr.min.js"></script>
+    <script src="/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="/libs/selectize/js/standalone/selectize.min.js"></script>
+    <script src="/js/app.min.js"></script>
+    <script src="/js/pages/dashboard-1.init.js"></script>
+    @await RenderSectionAsync("Scripts", false);
+
+</body>
+</html>
